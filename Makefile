@@ -48,19 +48,19 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 
 lint: ## check style with flake8
-	flake8 tjson_python tests
+	flake8 tjson tests
 
 test: ## run tests quickly with the default Python
-	
+
 		python setup.py test
 
 test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	
-		coverage run --source tjson_python setup.py test
-	
+
+		coverage run --source tjson setup.py test
+
 		coverage report -m
 		coverage html
 		$(BROWSER) htmlcov/index.html
@@ -68,7 +68,7 @@ coverage: ## check code coverage quickly with the default Python
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/tjson_python.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ tjson_python
+	sphinx-apidoc -o docs/ tjson
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html

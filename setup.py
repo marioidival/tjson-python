@@ -18,23 +18,20 @@ test_requirements = [
 ]
 
 setup(
-    name='tjson_python',
+    name='tjson',
     version='0.1.0',
     description="Python implementation of TJSON",
     long_description=readme + '\n\n' + history,
     author="Mario Idival",
     author_email='marioidival@gmail.com',
     url='https://github.com/marioidival/tjson_python',
-    packages=[
-        'tjson_python',
-    ],
-    package_dir={'tjson_python':
-                 'tjson_python'},
+    packages=['tjson'],
+    package_dir={'tjson': 'tjson'},
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
     zip_safe=False,
-    keywords='tjson_python',
+    keywords='tjson python',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
